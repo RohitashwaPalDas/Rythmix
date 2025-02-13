@@ -1,0 +1,105 @@
+.Search {
+    color: white;
+    width: 70%;
+    margin-left: 2vw;
+}
+
+.sideVisible{
+    margin-left: 0;
+}
+
+.allSearch {
+    /* margin-left: 18vw; */
+    margin-top: 11vh;
+    padding: 4vh 2vw;
+    display: flex;
+    width: 100%;
+}
+
+.topResult {
+    padding: 1vh 1vw;
+}
+
+.topCard {
+    position: relative;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    padding: 3vh 1.2vw;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent initial background */
+    backdrop-filter: blur(0); /* Initial backdrop blur */
+    transition: background 0.3s, backdrop-filter 0.3s; /* Smooth transition */
+}
+
+.topImg {
+    aspect-ratio: 1/1;
+    width: 10vw;
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+.topCard:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
+    backdrop-filter: blur(10px); /* Add blur on hover */
+}
+
+.titleHead {
+    font-size: 2.3rem;
+}
+
+.artistTop {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 300;
+}
+
+.topPlay {
+    font-size: 2.4rem;
+    position: absolute;
+    right: 1.5vw;
+    bottom: -3vh; /* Start below the visible area */
+    opacity: 0; /* Initially hidden */
+    transition: bottom 0.2s ease-out, opacity 0.2s ease-out, transform 0.1s linear; 
+}
+
+.topCard:hover .topPlay {
+    bottom: 1.1vh; /* Slide into position */
+    opacity: 1; /* Fade in */
+}
+
+.topCard:not(:hover) .topPlay {
+    transition: bottom 0.1s ease-in, opacity 0.1s ease-in; /* Fast exit transition */
+    bottom: -3vh; /* Return to hidden state */
+    opacity: 0; /* Fade out */
+}
+
+.topPlay:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 480px){
+    
+    .topResult{
+        display: none;
+    }
+
+    .Search{
+        width: 100%;
+        margin-right: 5vw;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .topResult{
+        display: none;
+    }
+    
+
+    .Search{
+        width: 100%;
+        margin-right: 5vw;
+    }
+}

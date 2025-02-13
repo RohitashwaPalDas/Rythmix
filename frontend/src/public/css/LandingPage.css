@@ -1,0 +1,136 @@
+/* Overall page styling */
+.music-landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #121212, #1c1c28, #28283e);
+    overflow: hidden; /* Prevent overflow of animated elements */
+    font-family: "Poppins", sans-serif;
+  }
+  
+  
+  /* Spinning vinyl record */
+  .spinning-record {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #333333 10%, #000000 80%);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    animation: spin 4s linear infinite;
+  }
+  
+  /* Record center circle */
+  .record::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #ff5c5c; /* Vivid red center */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Spinning animation for the vinyl record */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Music notes flying around */
+  .music-notes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .note {
+    position: absolute;
+    font-size: 2rem;
+    color: #ffda79; /* Light, glowing yellow for notes */
+    animation: floatNotes 2s ease-in-out infinite alternate;
+  }
+  
+  .note:nth-child(1) {
+    top: -40px;
+    left: -60px;
+    animation-duration: 3s;
+  }
+  
+  .note:nth-child(2) {
+    top: -60px;
+    left: 50px;
+    animation-duration: 4s;
+  }
+  
+  .note:nth-child(3) {
+    top: 40px;
+    left: -50px;
+    animation-duration: 5s;
+  }
+  
+  .note:nth-child(4) {
+    top: 60px;
+    left: 50px;
+    animation-duration: 2.5s;
+  }
+  
+  /* Floating music note animation */
+  @keyframes floatNotes {
+    from {
+      transform: translateY(0) rotate(0deg);
+    }
+    to {
+      transform: translateY(-20px) rotate(360deg);
+    }
+  }
+  
+  /* Welcome text styling */
+  /* Welcome text styling with new animation */
+.welcome-text {
+    margin-top: 50px;
+    font-size: 3.5rem;
+    text-align: center;
+    color: #f1f1f1;
+    position: relative;
+    z-index: 2; /* Ensure text appears above other elements */
+    letter-spacing: 3px;
+    animation: textGlow 4s ease-in-out infinite, slideUp 2.5s ease forwards;
+    opacity: 0;
+  }
+  
+  /* Text glow animation */
+  @keyframes textGlow {
+    0% {
+      text-shadow: 0 0 10px #f1f1f1, 0 0 20px #ff5c5c, 0 0 30px #ff5c5c, 0 0 40px #ff5c5c;
+    }
+    50% {
+      text-shadow: 0 0 20px #ffffff, 0 0 30px #ffda79, 0 0 40px #ffda79, 0 0 50px #ffda79;
+    }
+    100% {
+      text-shadow: 0 0 10px #f1f1f1, 0 0 20px #ff5c5c, 0 0 30px #ff5c5c, 0 0 40px #ff5c5c;
+    }
+  }
+  
+  /* Smooth slide-up effect for the text */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  

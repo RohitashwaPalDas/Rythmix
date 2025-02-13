@@ -1,0 +1,76 @@
+.PmainBox2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2vh 0.9vw;
+    border-radius: 7px;
+    margin-bottom: 2vh;
+}
+
+.PmainBox2.disabled {
+    pointer-events: none; /* Disable clicks */
+    opacity: 0.8; /* Visual cue */
+    cursor: not-allowed;
+}
+
+
+.PmainBox2_left{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.image2{
+    width: 8vh;
+    height: 8vh;
+    position: relative;
+    overflow: hidden;
+    margin-right: 2vh;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
+}
+
+
+.det2{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vh;
+}
+
+.artist2{
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.603);
+}
+
+.artist2:hover{
+    cursor: pointer;
+    text-decoration: 1.2px solid underline rgba(255, 255, 255, 0.603);
+}
+
+.title2{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.title2:hover{
+    cursor: pointer;
+    text-decoration: underline;
+} 
+
+.PmainBox2:hover{
+    background-color: rgba(128, 128, 128, 0.211);
+    cursor: pointer;
+}
+
+

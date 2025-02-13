@@ -1,0 +1,233 @@
+.mainProfile{
+    margin-top: 11vh;
+}
+
+/* Entire profile section container */
+.profile-section {
+    background: linear-gradient(180deg, #3a3a3a, #1f1f1f); /* Grey gradient background */
+    color: white;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    padding: 3vh 3vw;
+    /* width: 100%; */
+}
+
+.playlists, .following{
+    padding: 3vh 3vw;
+    padding-bottom: 0;
+}
+
+.see-more-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    display: block;
+}
+
+
+/* Profile Header (Image and Name) */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2rem;
+}
+
+.profile-image {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.profile-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 140px;
+    background-color: #404040;
+    border-radius: 50%;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.profile-placeholder:hover {
+    background-color: #555555;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.username {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #f1f1f1;
+}
+
+.followers {
+    font-size: 1.2rem;
+    color: #b3b3b3;
+}
+
+.email {
+    font-size: 1rem;
+    color: #c9c9c9;
+    margin-top: 0.5rem;
+}
+
+/* Profile Actions (Buttons and Links) */
+.profile-actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+
+.action-link, .logout-button {
+    text-decoration: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.action-link {
+    background-color: #1db954;
+}
+
+.action-link:hover {
+    background-color: #1ed760;
+}
+
+.logout-button {
+    background-color: #e22134;
+    border: none;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #ff2f45;
+}
+
+/* Profile Content Section */
+.profile-content {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-content h3 {
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+.profile-content p {
+    color: #b3b3b3;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+/* Animation on Hover for Links */
+.action-link:hover, .logout-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px){
+    .profile-section{
+        width: 83vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainProfile{
+        width: 99vw;
+    }
+    .profile-section {
+        padding: 2rem 1rem;
+        padding-bottom: 1rem;
+        width: 96vw;
+    }
+
+    .username {
+        font-size: 2.5rem;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-details {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px){
+    .profile-section{
+        width: 93vw;
+    }
+}
+
+.link{
+    text-decoration: none;
+}
+
+.changePwd{
+    text-decoration: none;
+    display: flex;
+    gap: 5px;
+    color: green;
+}
+
+.changePwd:hover{
+    cursor: pointer;
+    color: #1ed760;    
+}
+
+.changePwd span:hover{
+    text-decoration: 1px solid underline;
+}
+
+.regAsArtist{
+    color: green;
+    border-left: 2px solid green;
+    padding-left: 20px;
+}
+
+.regAsArtist:hover{
+    cursor: pointer;
+    color: #1ed760; 
+    text-decoration: 1px solid underline;
+}
+
+.links{
+    display: flex;
+    gap: 20px;
+}

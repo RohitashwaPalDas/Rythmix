@@ -1,0 +1,8 @@
+.cardcombn{
+    padding: 0 2vw;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4vw;
+}

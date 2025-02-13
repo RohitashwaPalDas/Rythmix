@@ -1,0 +1,130 @@
+.iconCard{
+    /* background-color: red; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    transition: 0.1s linear;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+}
+
+.icon{
+    font-size: 1.4rem;
+}
+
+.iconCard:hover{
+    cursor: pointer;
+    color: #fff;
+}
+
+.iconLab{
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.active{
+    color: white;
+}
+
+.no-active{
+    color: #ffffff92;
+}
+
+.plus{
+    position: absolute;
+    right: 10px;
+    bottom: 20%;
+}
+
+
+
+/* Adjust font sizes and spacing for smaller screens */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .iconCard {
+        gap: 15px;
+        padding: 8px 0;
+    }
+
+    .icon {
+        font-size: 1.2rem;
+    }
+
+    .iconLab {
+        display: none;
+    }
+
+    .plus {
+        right: 8px;
+        bottom: 30%;
+    }
+
+    .addLibIcon{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .iconCard {
+        flex-direction: row;
+        gap: 10px;
+        padding: 5px 0;
+    }
+
+    .icon {
+        font-size: 1rem;
+    }
+
+    .iconLab {
+        font-size: 0.9rem;
+    }
+
+    .plus {
+        right: 5px;
+        bottom: 30%;
+    }
+}
+
+.icon {
+    font-size: 1.4rem;
+}
+
+.iconCard:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+.iconLab {
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.active {
+    color: white;
+}
+
+.no-active {
+    color: #ffffff92;
+}
+
+.plus {
+    position: absolute;
+    right: 10px;
+    bottom: 20%;
+}
+
+/* Additional hover effect */
+.iconCard:hover .iconLab, 
+.iconCard:hover .icon {
+    color: #1db954; /* Spotify green color */
+}
+
+/* Responsive hover effect */
+@media screen and (max-width: 480px) {
+    .iconCard:hover .iconLab, 
+    .iconCard:hover .icon {
+        color: #1db954;
+    }
+}

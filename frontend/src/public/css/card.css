@@ -1,0 +1,128 @@
+.cards {
+    position: relative;
+    height: 100%;
+    width: 15rem;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cards .artistProfile-placeholder{
+    border-radius: 50%;
+    background-color: green;
+    width: 15rem; 
+    height: 15rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    margin: 0 auto;
+}
+
+.cards .image img {
+    width: 15rem; /* Equal width for the image */
+    height: 15rem; /* Equal height for the image */
+    border-radius: 50%; /* Perfect circle */
+    object-fit: cover; /* Maintain the image aspect ratio */
+    margin: 0 auto; /* Center the image */
+    display: block; /* Ensure proper centering */
+}
+
+.cards .card-details {
+    padding: 1vw;
+    position: relative;
+    text-align: center;
+}
+
+.card-details .card_name {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-bottom: 1vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card_name a {
+    text-decoration: none;
+    color: white;
+}
+
+.card-details .card_descp {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Media Query for Screens with max-width 1024px */
+@media screen and (max-width: 1024px) {
+    .cards {
+        width: 18rem; /* Adjust card width */
+        height: auto;
+    }
+    .cards .image img {
+        width: 10rem; /* Smaller size for responsiveness */
+        height: 10rem; /* Maintain circle by equal dimensions */
+        border-radius: 50%; /* Ensure circular shape */
+    }
+    .cards .artistProfile-placeholder{
+        width: 10rem; 
+        height: 10rem;
+    }
+    .card-details .card_name {
+        font-size: 1.1rem; /* Adjust font size */
+    }
+    .card-details .card_descp {
+        font-size: 0.95rem; /* Adjust description size */
+    }
+}
+
+/* Media Query for Tablets (max-width 768px) */
+@media screen and (max-width: 768px) {
+    .cards {
+        width: 12rem;
+        height: auto;
+    }
+    .cards .image img {
+        width: 8rem; /* Smaller size for tablets */
+        height: 8rem; /* Maintain circle */
+        border-radius: 50%; /* Ensure circular shape */
+    }
+    .cards .artistProfile-placeholder{
+        width: 8rem; 
+        height: 8rem;
+    }
+    .card-details .card_name {
+        font-size: 1rem;
+    }
+    .card-details .card_descp {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Query for Mobile (max-width 480px) */
+@media screen and (max-width: 480px) {
+    .cards {
+        width: 10rem;
+        height: auto;
+    }
+    .cards .image img {
+        width: 6rem; /* Smaller size for mobile */
+        height: 6rem; /* Maintain circle */
+        border-radius: 50%; /* Ensure circular shape */
+    }
+    .cards .artistProfile-placeholder{
+        width: 6rem; 
+        height: 6rem;
+    }
+    .card-details .card_name {
+        font-size: 0.9rem;
+    }
+    .card-details .card_descp {
+        font-size: 0.8rem;
+    }
+}

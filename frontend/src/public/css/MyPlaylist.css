@@ -1,0 +1,134 @@
+.myPlaylistSec{
+    /* margin-left: 18vw; */
+    margin-top: 11vh;
+    padding: 3vh 3vw;
+    color: white;
+}
+
+.myPlaylistSec {
+    margin-top: 11vh;
+    padding: 3vh 3vw;
+    color: white;
+}
+
+.playlistSec {
+    display: flex;
+    justify-content: space-around;
+    
+    gap: 2rem; /* Spacing between cards */
+    justify-items: center; /* Center items horizontally */
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.myPlaylistHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plusLogo{
+    display: none;
+    font-size: 1.6rem;
+}
+
+.playlistCreation {
+    position: relative;
+    width: 17vw;
+    aspect-ratio: 1/1.1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #243b55, #141e30);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    color: white;
+}
+
+.playlistCreation:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.addIcon {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.playlistCreation:hover .addIcon {
+    transform: scale(1.2);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.addLabel {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .playlistSec {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .playlistCreation {
+        width: 20vw;
+        aspect-ratio: 1/1.1;
+    }
+
+    .addIcon {
+        font-size: 2rem;
+    }
+
+    .addLabel {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .plusLogo{
+        display: block;
+    }
+
+    .playlistSec{
+        display: flex;
+        flex-direction: column;
+    }
+    .playlistCreation {
+        display: none;
+    }
+
+    .addIcon {
+        font-size: 2.5rem;
+    }
+
+    .addLabel {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .playlistCreation {
+        display: none;
+    }
+
+    .addIcon {
+        font-size: 2rem;
+    }
+
+    .addLabel {
+        font-size: 0.9rem;
+    }
+}
+

@@ -1,0 +1,29 @@
+.mainCard{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    /* width: 100%; */
+    padding: 1.0vh 0.7vw;
+    border-radius: 7px;
+    margin-bottom: 2vh;
+    /* background-color: blue; */
+}
+
+.profileImage{
+    height: 60px;
+    width: 60px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.name{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.mainCard:hover{
+    background-color: rgba(128, 128, 128, 0.211);
+}
+
+

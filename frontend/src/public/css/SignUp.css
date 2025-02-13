@@ -1,0 +1,100 @@
+.mainContainer {
+    margin: 12vh auto;
+    background: rgba(18, 18, 18, 0.5); /* More transparent background */
+    backdrop-filter: blur(15px); /* Increased blur for a stronger effect */
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slightly thicker white border */
+    border-radius: 15px; /* Increased border radius for a smoother look */
+    padding: 20px 30px; /* Padding for inner content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Enhanced shadow for more depth */
+    overflow: hidden; /* Ensure child elements don't overflow */
+    position: relative; /* Allow for pseudo-elements */
+}
+
+/* Optional: Adding a gradient overlay for a more complex glass effect */
+.mainContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    opacity: 0.7; /* Adjust opacity as needed */
+    border-radius: inherit; /* Match the border radius of the main container */
+    pointer-events: none; /* Ensure this element doesn't interfere with user interactions */
+}
+
+.logo{
+    font-size: 3.5em;
+}
+
+.signUpForm{
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.337);
+}
+
+.switch{
+    margin-top: 2vh;
+    color: #ffffff74;
+}
+
+.signUpLink{
+    color: #fff;
+    font-weight: bold;
+}
+
+.signUpLink:hover{
+    color: #1FDF64;
+    text-decoration: underline;
+}
+
+.continue_with{
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.337);
+}
+
+.formButton{
+    background-color: #1FDF64;
+    border: none;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: black;
+    border-radius: 30px;
+    width: 100%;
+    transition: 0.1s ease-in;
+    margin-top: 1.2vh;
+}
+
+.formButton:hover{
+    cursor: pointer;
+    background-color: #1fdf65c2;
+    transform: scale(1.02);
+    font-weight: 750;
+}
+
+.password-strength-bar {
+    display: flex;
+    margin-top: 10px;
+    height: 5px;
+    background: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.strength-segment {
+    flex: 1;
+    background: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.strength-segment.filled {
+    background: #1FDF64; /* Adjust color for better UI */
+}

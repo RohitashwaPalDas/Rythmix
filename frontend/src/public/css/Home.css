@@ -1,0 +1,314 @@
+.mainSec {
+    margin-top: 13vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.artistSection{
+    position: relative;
+}
+.playlistSection{
+    position: relative;
+}
+
+.seeMoreBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.homeHead{
+    margin-left: 10px;
+}
+
+
+
+.artists {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2vw;
+    overflow-x: auto; /* Keep scrolling enabled */
+    padding: 0.5rem;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For IE and Edge */
+}
+
+
+
+.artists::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+.scrollBtn {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scrollBtn.left {
+    left: 0.5rem;
+}
+
+.scrollBtn.right {
+    right: 0.5rem;
+}
+
+.scrollBtn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+}
+
+
+.playlistsHome {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2vw;
+    overflow-x: auto;
+    padding: 0.5rem;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For IE and Edge */
+}
+
+.playlistsHome::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, Edge */
+}
+
+
+.artists.expanded {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Expand to fit all artists */
+    max-height: none;  /* Remove height restriction */
+}
+
+.seeMoreBtn {
+    margin-top: 2vh;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    display: block;
+}
+
+.seeMoreBtn:hover {
+    text-decoration: 1px solid underline;
+}
+
+
+.homePage{
+    display: flex;
+}
+
+.rightPart{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    margin-left: 18vw;
+    margin-bottom: 11vh;
+    width: 82vw;
+    /* background-color: red; */
+    position: relative;
+}
+
+.children{
+    width: 81vw;
+    /* border: 2px solid white; */
+}
+
+.sideSongPlayer{
+    background-color: black;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    height: 72vh;
+    /* border: 2px solid white; */
+    margin-top: 11vh;
+    padding: 3vh 1vw;
+    padding-right: 2vw;
+    position: fixed;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.sideSongPlayer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+
+.mainSection{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: orange; */
+    justify-content: space-between;
+    position: relative;
+    left: -0.3vw;
+}
+
+.sideBackground{
+    height: 60vh;
+    width: 25vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    justify-self: center;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.closePart{
+    position: absolute;
+    top: 1vh;
+    right: 0.5vw;
+}
+
+.queue{
+    padding-bottom: 2vh;
+}
+
+/* New Styling */
+.children.shrink {
+    width: calc(100% - 28vw); /* Adjust the width when sideSongPlayer is present */
+}
+
+@media screen and (max-width: 1024px) {
+    .rightPart{
+        margin-left: 12vw;
+        width: 88vw;
+    }
+    .children{
+        width: 88vw;
+    }
+    .mainSection{
+        left: -1vw;
+    }
+
+    .sideSongPlayer{
+        display: none !important;
+        width: 0;
+        height: 0;
+    }
+    
+    .children.shrink{
+        width: 100%;
+    }
+}
+
+.allArtists{
+    display: flex;
+    justify-content: space-around;
+    gap: 2vw;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.playlistScrollContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  #playlistsScrollable {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    gap: 16px; /* Space between playlist cards */
+    flex: 1;
+  }
+  
+  .scrollBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .scrollBtn.left {
+    left: 10px; /* Positioning on the left */
+  }
+  
+  .scrollBtn.right {
+    right: 10px; /* Positioning on the right */
+  }
+  
+  .scrollBtn:hover {
+    background: #333; /* Darker background on hover */
+  }
+  
+  .playlistsHome {
+    display: flex;
+    overflow: auto;
+    gap: 16px; /* Space between items */
+    width: 100%;
+  }
+
+@media screen and (max-width: 768px) {
+    .rightPart{
+        margin-left: 1vw;
+        width: 99vw;
+    }
+    .children{
+        width: 101vw;
+    }
+    .mainSection{
+        left: -2vw;
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .seeMoreBtn {
+        display: none; /* Hide the button */
+    }
+    .artists {
+        grid-template-columns: repeat(4, 8rem); /* Adjust card size for smaller screens */
+        gap: 0.75rem; /* Adjust the gap */
+    }
+}
+
+/* For Mobile (max-width 480px) */
+@media screen and (max-width: 480px) {
+    .seeMoreBtn {
+        display: none; /* Hide the button */
+    }
+    .artists {
+        grid-template-columns: repeat(4, 5rem); /* Smaller card size for mobiles */
+        gap: 0.5rem; /* Reduce the gap further */
+    }
+}
+
+
+  

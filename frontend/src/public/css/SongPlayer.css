@@ -1,0 +1,301 @@
+.SongPlayer {
+    background-color: black;
+    width: 95vw;
+    height: 7vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 2vh 2.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.songInfo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.image2 {
+    width: 8vh;
+    height: 8vh;
+    position: relative;
+    overflow: hidden;
+    margin-right: 2vh;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.image2:hover .overlay, .image2:hover .playLogo2 {
+    opacity: 1;
+}
+
+.playLogo2 {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    top: 0.5vh;
+    right: 0.5vh;
+    background-color: rgba(0, 0, 0, 0.636);
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+    padding: 0 4px;
+}
+
+.playLogo2 i {
+    font-size: 1.1rem;
+}
+
+.det2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vh;
+}
+
+.artist2, .title2 {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.artist2 {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.603);
+}
+
+.artist2:hover {
+    text-decoration: underline;
+}
+
+.title2 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.title2:hover {
+    text-decoration: underline;
+}
+
+.addlikesong {
+    color: rgba(255, 255, 255, 0.784);
+    border: 3px solid rgba(255, 255, 255, 0.784);
+    border-radius: 50%;
+    font-size: 0.7rem;
+    padding: 1px 2px;
+    margin-left: 1vh;
+}
+
+.play-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: rgba(255, 255, 255, 0.633);
+}
+
+.circlePlay {
+    font-size: 2.3rem;
+}
+
+.changeSong {
+    font-size: 1.5rem;
+}
+
+.effectSong {
+    font-size: 1rem;
+}
+
+.xtraBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.784);
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between timestamps and slider */
+    width: 100%;
+    color: #b3b3b3; /* Light grey text color */
+}
+
+.time-display .timeStamp {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+input[type="range"] {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    flex-grow: 1; /* Make the slider stretch between timestamps */
+    height: 4px; /* Height of the track */
+    background: rgba(179, 179, 179, 0.3); /* Light grey background for the track */
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none; /* Remove outline on focus */
+    border: none; /* No border */
+    position: relative;
+}
+
+input[type="range"]:hover,
+input[type="range"]:active,
+input[type="range"]:focus {
+    outline: none; /* Ensure no outline on hover or focus */
+    border: none; /* No border */
+    background: rgba(179, 179, 179, 0.6); /* Slightly darker track on hover */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%; /* Circular thumb */
+    background-color: #1db954; /* Spotify green */
+    cursor: pointer;
+    border: none; /* Remove thumb border */
+    position: relative;
+    top: 50%; /* Move the thumb vertically */
+    transform: translateY(-50%); /* Center it vertically */
+    transition: transform 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: translateY(-50%) scale(1.2); /* Enlarge thumb on hover */
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #1db954;
+    cursor: pointer;
+    border: none; /* Remove thumb border */
+    position: relative;
+    top: 50%; /* Move the thumb vertically */
+    transform: translateY(-50%); /* Center it vertically */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+    background: rgba(179, 179, 179, 0.3); /* Light grey background for the track */
+    border-radius: 5px;
+    position: relative;
+    border: none; /* No border on the track */
+}
+
+input[type="range"]:hover::-webkit-slider-runnable-track {
+    background: rgba(179, 179, 179, 0.6); /* Slightly darker track on hover */
+}
+
+
+.volumeControl {
+    display: flex;
+    align-items: center;
+}
+
+.volumeControl i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.volume-range {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.volume-range::-webkit-slider-thumb,
+.volume-range::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.repeatActive {
+    color: #1DB954;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    input{
+        margin: 0;
+    }
+    .sideSongPlayer, .otherBtn, .timeStamp {
+        display: none;
+    }
+
+    .playPause {
+        font-size: 1.7rem;
+    }
+
+    .playArea {
+        display: flex;
+    }
+
+    .SongPlayer {
+        flex-shrink: initial;
+    }
+
+    .progress-bar {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        gap: 0;
+    }
+
+    .progress-bar input[type="range"] {
+        width: 100vw;
+    }
+
+    .time-display .timeStamp {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .playPause {
+        font-size: 2.3rem;
+    }
+}
+
+@media (orientation: landscape) {
+    .changeSong {
+        display: block;
+    }
+}
+

@@ -1,0 +1,8 @@
+.QueuePlaylistModal{
+    background-color: green;
+    position: fixed;
+    width: 30vw;
+    height: 100vh;
+    right: 0;
+    top: 11vh;
+}

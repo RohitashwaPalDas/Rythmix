@@ -1,0 +1,107 @@
+/* Loader styling */
+.progress-circle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring__background {
+    stroke-width: 4;
+    r: 25;
+    cx: 30;
+    cy: 30;
+}
+
+.progress-ring__circle {
+    stroke-width: 4;
+    r: 25;
+    cx: 30;
+    cy: 30;
+    transition: stroke-dashoffset 0.35s;
+    transform-origin: 50% 50%;
+}
+
+.progress-percentage {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    color: grey;
+}
+
+/* Success tick and eye icon */
+.file-input-wrapper {
+    position: relative;
+}
+
+.upload-success-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: green;
+    font-size: 20px;
+}
+
+.view-file-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.view-file-icon {
+    cursor: pointer;
+    color: blue;
+    font-size: 20px;
+}
+
+/* Smaller circle size */
+.progress-ring {
+    width: 60px;
+    height: 60px;
+}
+
+.uploadButton {
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.05rem;
+    transition: background-color 0.1s ease-in;
+    width: 12vw;
+}
+
+.uploadButton:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.uploadButton:hover:enabled {
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 768px){
+    .uploadButton{
+        width: 28vw;
+    }
+}

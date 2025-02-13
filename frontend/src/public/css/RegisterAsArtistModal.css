@@ -1,0 +1,157 @@
+.RegisterModal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100vw;
+    height: 100vh;
+    color: #f1f1f1;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+.modalContainer {
+    width: 90%; /* Default width for smaller screens */
+    max-width: 400px; /* Limit max width */
+    padding: 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.084), rgba(255, 255, 255, 0.023));
+    border-radius: 20px;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 3px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+}
+
+.closeIcon {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    font-size: 1.4rem;
+    color: gray;
+    transition: 0.1s linear;
+}
+
+.closeIcon:hover {
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+/* Text inside modal */
+.RegisterModal > div:first-child {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* Button container */
+.regOptBtns {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    flex-wrap: wrap;
+}
+
+/* Button styling */
+.regOptBtns button {
+    flex: 1 1 auto;
+    min-width: 100px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.1s linear;
+}
+
+.yesBtn {
+    background-color: rgb(34, 164, 34);
+}
+
+.yesBtn:hover {
+    cursor: pointer;
+    background-color: rgba(34, 164, 34, 0.797);
+    transform: scale(1.1);
+}
+
+.noBtn {
+    background-color: red;
+}
+
+.noBtn:hover {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.697);
+    transform: scale(1.1);
+}
+
+/* Media queries */
+
+/* For very small screens (max-width: 468px) */
+@media (max-width: 480px) {
+    .modalContainer {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .RegisterModal > div:first-child {
+        font-size: 1rem;
+    }
+
+    .regOptBtns button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .closeIcon {
+        font-size: 1.2rem;
+    }
+}
+
+/* For tablets or small desktops (max-width: 768px) */
+@media (max-width: 768px) {
+    .modalContainer {
+        width: 80%;
+    }
+
+    .RegisterModal > div:first-child {
+        font-size: 1.2rem;
+    }
+
+    .regOptBtns button {
+        font-size: 1rem;
+    }
+
+    .closeIcon {
+        font-size: 1.4rem;
+    }
+}
+
+/* For medium to large desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .modalContainer {
+        width: 60%;
+    }
+
+    .RegisterModal > div:first-child {
+        font-size: 1.3rem;
+    }
+
+    .regOptBtns button {
+        font-size: 1.1rem;
+    }
+}

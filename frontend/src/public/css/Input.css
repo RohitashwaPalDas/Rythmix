@@ -1,0 +1,122 @@
+/* Base Styles */
+.input {
+    margin-bottom: 2vh;
+    position: relative;
+}
+
+.label {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #121212 inset !important;
+    -webkit-text-fill-color: #fff !important;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px #121212 inset !important;
+    -webkit-text-fill-color: #fff !important;
+}
+
+.input input {
+    margin-top: 1vh;
+    width: 20vw;
+    padding: 15px;
+    background: #121212;
+    border: 2px solid #ffffff56;
+    border-radius: 4px;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border: 3px solid #fff;
+}
+
+input:hover {
+    border: 2px solid #fff;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 2vh;
+    bottom: 1vh;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #fff;
+}
+
+/*New*/
+.input-container {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding-right: 40px; /* Space for the toggle icon */
+    padding-left: 10px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #121212;
+    border: 2px solid #ffffff56;
+    color: #fff;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+}
+
+
+/* Responsive Design */
+
+/* For screens up to 1024px */
+@media (max-width: 1024px) {
+    .input input {
+        width: 30vw; /* Adjust input width */
+    }
+
+    
+}
+
+/* For screens up to 768px */
+@media (max-width: 768px) {
+    .input input {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+
+    
+}
+
+/* For screens up to 480px */
+@media (max-width: 480px) {
+    .input input {
+        width: 90%; /* Further reduce width for very small screens */
+    }
+
+    .label {
+        font-size: 1rem; /* Adjust label font size */
+    }
+
+    
+}

@@ -1,0 +1,278 @@
+.navBar {
+    background-color: #1f1f1f;
+    width: 79vw;
+    height: 9vh;
+    position: fixed;
+    top: 0;
+    left: 17.7vw;
+    padding: 1vh 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    overflow: hidden; /* Prevents overflow issues */
+}
+
+.logInBtn {
+    background-color: #fff;
+    border: none;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: black;
+    border-radius: 25px;
+    transition: 0.1s ease-in;
+    margin-top: 1.2vh;
+    width: 8vw;
+}
+
+.logInBtn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.signUpBtn {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: black;
+    border-radius: 25px;
+    transition: 0.1s ease-in;
+    margin-top: 1.2vh;
+    width: 15vh;
+    color: grey;
+}
+
+.signUpBtn:hover {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.regBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.shiftBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    color: grey;
+    font-size: 1.2rem;
+}
+
+.shiftBtns i {
+    transition: 0.2s linear;
+}
+
+.shiftBtns i:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #2A2A2A;
+    padding: 1.5vh 1.6vw;
+    width: 30vw;
+    transition: 0.1s linear;
+    min-width: 200px; /* Ensure minimum width for search bar */
+}
+
+.searchBar1 {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+
+.search input {
+    width: 100%;
+    height: 4vh;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.search {
+    width: 100%;
+}
+
+.searchBar:hover {
+    border: 2px solid white;
+}
+
+.searchBar:focus-within {
+    border: 2px solid white;
+}
+
+.delSearch {
+    font-size: 1.5rem;
+    color: grey;
+    transition: 0.1s ease-in;
+}
+
+.delSearch:hover {
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.profile {
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+
+.navProfile-placeholder{
+    padding: 0.7rem ;
+    background-color: #B49BC8;
+    border-radius: 50%;
+}
+
+.profile img{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+}
+
+.hambars {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .navBar {
+        width: 85vw; /* Full width on mobile */
+        left: 11vw; /* Align to the left */
+        padding: 1vh 2vw; /* Adjust padding for mobile */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile {
+        padding: 0.3rem;
+        text-align: center;
+        font-size: smaller;
+    }
+    .navBar {
+        width: 96vw; /* Full width on mobile */
+        left: 0; /* Align to the left */
+        padding: 1vh 2vw; /* Adjust padding for mobile */
+    }
+
+    .hambars {
+        display: block; /* Show hamburger menu */
+    }
+
+    .shiftBtns {
+        display: none; /* Hide buttons on mobile */
+    }
+
+    .searchBar {
+        width: 70%; /* Adjust search bar width on mobile */
+        min-width: 150px; /* Minimum width for search bar */
+    }
+
+    
+}
+
+
+
+.hambars i {
+    transition: transform 0.2s ease;
+}
+
+.hambars:hover i {
+    transform: scale(1.1);
+}
+
+.link{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .searchBar {
+        width: 50%; /* Reduce width for tablets */
+        min-width: 150px;
+    }
+    .logInBtn {
+        padding: 13px;
+        font-size: 1rem;
+        width: 12vw;
+    }
+
+    .signUpBtn{
+        font-size: 1rem;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .searchBar {
+        width: 70%; /* Adjust width for mobile screens */
+        padding: 1vh 1vw; /* Reduce padding */
+    }
+    .search input {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+    .delSearch {
+        font-size: 1.2rem; /* Adjust delete icon size */
+    }
+    .logInBtn {
+        padding: 1vh 1vw;
+        font-size: 0.95rem;
+        width: 12vw;
+    }
+    .signUpBtn{
+        font-size: 0.90rem;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .searchBar {
+        padding: 1vh 1vw;
+        padding-left: 3vw; /* Expand width for very small screens */
+    }
+    .search input {
+        font-size: 0.9rem; /* Further reduce font size */
+    }
+    .logInBtn {
+        padding: 10px;
+        font-size: 0.85rem;
+        width: 20vw;
+        margin-top: 1vh;
+    }
+    .signUpBtn{
+        font-size: 0.85rem;
+        width: auto;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 768px) {
+    .navProfile-placeholder{
+        padding: 0.4rem ;
+    }
+    
+    .profile img{
+        margin-top: 5px;
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+}

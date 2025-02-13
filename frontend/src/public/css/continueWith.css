@@ -1,0 +1,67 @@
+.continueWith {
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    background-color: transparent;
+    border: 2px solid #ffffff56;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #fff;
+    border-radius: 30px;
+    width: 100%;
+    transition: 0.1s ease-in;
+    margin-bottom: 2vh;
+    width: 20vw;
+}
+
+.continueWith:hover {
+    cursor: pointer;
+    border-color: #fff;
+}
+
+.continue-social-logo {
+    margin-right: 10px; /* Reduce space between logo and text */
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+
+/* For screens up to 1024px */
+@media (max-width: 1024px) {
+    .continueWith {
+        width: 30vw; /* Adjust width for medium screens */
+        padding: 10px; /* Adjust padding for smaller space */
+        font-size: 1rem;
+    }
+
+    .continue-social-logo {
+        font-size: 1rem; /* Adjust logo size */
+    }
+}
+
+/* For screens up to 768px */
+@media (max-width: 768px) {
+    .continueWith {
+        width: 50vw; /* Adjust width for smaller screens */
+        font-size: 0.9rem; /* Adjust text size */
+        padding: 8px; /* Reduce padding */
+    }
+
+    .continue-social-logo {
+        font-size: 0.9rem; /* Adjust logo size */
+    }
+}
+
+/* For screens up to 480px */
+@media (max-width: 480px) {
+    .continueWith {
+        width: 100%; /* Use percentage for very small screens */
+        font-size: 0.8rem; /* Further reduce text size */
+        padding: 6px; /* Minimal padding */
+    }
+
+    .continue-social-logo {
+        font-size: 0.8rem; /* Further adjust logo size */
+    }
+}

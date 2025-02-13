@@ -1,0 +1,183 @@
+.leftPanel{
+    background-color: rgba(0, 0, 0);
+    width: 16vw;
+    height: 100vh;
+    padding: 1vw;
+    position: fixed;
+    left: 0;
+    top:0;
+    transition: width 0.3s ease;
+}
+
+.panel-logo{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.panel-logo .rythmixLogo{
+    border-radius: 50%;
+    width: 3rem;
+    aspect-ratio: 1/1;
+}
+
+.panelLogo{
+    font-size: 2rem;
+}
+
+.logo-label{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.lpSec {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 1vw;
+    margin-bottom: 3vh;
+    padding: 20px;
+    background: #121212; /* Semi-transparent white background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.112); /* Subtle shadow */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.196);
+}
+
+
+
+.leftPanel {
+    /* background-color: red; */
+    width: 16vw;
+    height: 100vh;
+    padding: 1vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+.closeHam{
+    display: none;
+    position: absolute;
+    right: 1vw;
+}
+
+/* Mobile view: collapse the left panel and show the hamburger menu */
+@media screen and (max-width: 768px) {
+    .leftPanel {
+        width: 0;
+        display: none;
+    }
+
+    .leftPanel.open {
+        width: 60vw;
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .closeHam{
+        display: block;
+    }
+}
+
+
+/* Tablet view: only show icons */
+@media screen and (max-width: 1024px){
+    .leftPanel {
+        width: 10vw;
+    }
+
+    .iconLabel {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .logo-label{
+        display: none;
+    }
+}
+
+
+
+
+.panel-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.panelLogo {
+    font-size: 2rem;
+}
+
+.logo-label {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.lpSec {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 1vw;
+    margin-bottom: 3vh;
+    padding: 20px;
+    background: #121212;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.112);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.196);
+}
+
+/* Responsive hover effect */
+@media screen and (max-width: 480px) {
+    .iconCard:hover .iconLabel,
+    .iconCard:hover .icon {
+        color: #1db954;
+    }
+    .closeHam{
+        display: block;
+    }
+
+    .leftPanel{
+        width: 0;
+    }
+    
+}
+
+@media (orientation: landscape){
+    .isSongPlaying{ 
+        
+        height: calc(100vh - 12vh); /* Adjust for the song player's height */
+        overflow-y: auto; /* Enable vertical scrolling */
+        
+    }
+
+}

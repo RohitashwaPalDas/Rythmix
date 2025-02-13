@@ -1,0 +1,12 @@
+.mySongSec{
+    /* margin-left: 18vw; */
+    margin-top: 11vh;
+    padding: 3vh 3vw;
+    color: white;
+}
+
+@media screen and (max-width: 480px){
+    .mySongSec{
+        width: 90vw;
+    }
+}
