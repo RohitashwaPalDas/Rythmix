@@ -3,7 +3,11 @@ import { backendUrl } from './config';
 export const makeUnauthPOSTReq = async (route, data) => {
     const urlEncodedData = new URLSearchParams(data).toString();
 
+<<<<<<< HEAD
     const response = await fetch(`https://rythmix-backend-emov.onrender.com${route}`, {
+=======
+    const response = await fetch(`https://rythmix-backend-d16f.onrender.com${route}`, {
+>>>>>>> a7790b6 (frontend url updated)
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -28,7 +32,11 @@ export const makeAuthPOSTReq = async (route, data) => {
     try {
         const urlEncodedData = new URLSearchParams(data).toString();
 
+<<<<<<< HEAD
         const response = await fetch(`https://rythmix-backend-emov.onrender.com${route}`, {
+=======
+        const response = await fetch(`https://rythmix-backend-d16f.onrender.com${route}`, {
+>>>>>>> a7790b6 (frontend url updated)
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -54,7 +62,11 @@ export const makeAuthPUTReq = async (route, data) => {
     try {
         const urlEncodedData = new URLSearchParams(data).toString();
 
+<<<<<<< HEAD
         const response = await fetch(`https://rythmix-backend-emov.onrender.com${route}`, {
+=======
+        const response = await fetch(`https://rythmix-backend-d16f.onrender.com${route}`, {
+>>>>>>> a7790b6 (frontend url updated)
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -78,7 +90,11 @@ export const makeAuthPUTReq = async (route, data) => {
 
 export const makeAuthGETReq = async (route) => {
     try {
+<<<<<<< HEAD
         const response = await fetch(`https://rythmix-backend-emov.onrender.com${route}`, {
+=======
+        const response = await fetch(`https://rythmix-backend-d16f.onrender.com${route}`, {
+>>>>>>> a7790b6 (frontend url updated)
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -101,7 +117,11 @@ export const makeAuthGETReq = async (route) => {
 
 export const makeAuthDELETEReq = async (route) => {
     try {
+<<<<<<< HEAD
         const response = await fetch(`https://rythmix-backend-emov.onrender.com${route}`, {
+=======
+        const response = await fetch(`https://rythmix-backend-d16f.onrender.com${route}`, {
+>>>>>>> a7790b6 (frontend url updated)
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

@@ -122,7 +122,7 @@ export default function SignUp() {
     const passwordStrength = checkPasswordCriteria(password);
 
     const handleGoogleSuccess = async (response) => {
-        window.open('http://localhost:3000/auth/google', '_self');
+        window.open('https://rythmix-backend-d16f.onrender.com/auth/google', '_self');
     };
 
     return (

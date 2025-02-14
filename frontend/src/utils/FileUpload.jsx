@@ -26,7 +26,7 @@ const FileUpload = ({ onUpload, btnLabel, initialFileUrl, accept }) => {
                 console.log("Response:",token);
                 // Step 2: Fetch the Cloudinary config using the token
                 console.log("Fetching data from /api/config...");
-                const res = await fetch("http://localhost:3000/api/config", {
+                const res = await fetch("https://rythmix-backend-d16f.onrender.com/api/config", {
                     method: "GET",
                     headers: {
                         Authorization: `Bearer ${token}`,
