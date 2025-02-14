@@ -1,1 +1,1 @@
-export const backendUrl = "http://localhost:5173"
+export const backendUrl = "https://rythmix-backend-emov.onrender.com"
