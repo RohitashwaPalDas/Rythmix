@@ -36,7 +36,8 @@ mongoose.connect(dbURL)
 // Middleware configuration
 app.use(cors({
   origin: 'https://rythmix-frontend.onrender.com', // Frontend URL
-  credentials: true // Allow cookies and credentials to be sent
+  credentials: true, // Allow cookies and credentials to be sent
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 app.use((req, res, next) => {
@@ -48,6 +49,12 @@ app.options('*', cors({ origin: 'https://rythmix-frontend.onrender.com', credent
 
 
 app.use(express.urlencoded({ extended: true }));
+
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "https://rythmix-frontend.onrender.com");
+    res.header("Access-Control-Allow-Credentials", "true");
+    next();
+});
 
 const store = MongoStore.create({
     mongoUrl: dbURL,
@@ -70,7 +77,8 @@ const sessionOptions = {
         maxAge: 7 * 24 * 60 * 60 * 1000, // 1 week
         httpOnly: true,
         secure: true, // Set to true if using HTTPS
-        sameSite: "none"
+        sameSite: "none",
+        domain: ".onrender.com"
     }
 };
 
