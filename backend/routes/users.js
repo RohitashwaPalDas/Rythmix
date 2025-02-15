@@ -14,22 +14,23 @@ const nodemailer = require("nodemailer");
 
 router.post("/signup", isValidEmail, userController.SignUp);
 router.put("/profile", isValidEmail, userController.editProfile);
-router.post("/login", (req, res, next) => {
-  passport.authenticate("local", (err, user, info) => {
-    if (err) return next(err);
-    if (!user) return res.status(401).json({ err: info.message });
-
-    req.logIn(user, (err) => {
-      if (err) return next(err);
-
-      // Ensure session is saved before sending response
-      req.session.save(() => {
-        return res.json({ user });
+router.post("/login",
+  passport.authenticate("local", { 
+      failureRedirect: false, // Don't redirect on failure
+      failureFlash: true,
+  }), 
+  (req, res) => {
+    // Check if authentication failed (failureFlash will be populated)
+    if (req.flash('error').length > 0) {
+      return res.status(401).json({
+        err: req.flash('error')[0], // Send the failure message as JSON
       });
-    });
-  })(req, res, next);
-});
+    }
 
+    // Authentication successful, proceed to log in the user
+    userController.LogIn(req, res);
+  }
+);
 
 router.get("/myfollowing", isLoggedIn, async (req, res) => {
   try {

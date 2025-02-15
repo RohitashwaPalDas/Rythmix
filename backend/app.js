@@ -70,7 +70,7 @@ const sessionOptions = {
         maxAge: 7 * 24 * 60 * 60 * 1000, // 1 week
         httpOnly: true,
         secure: false, // Set to true if using HTTPS
-        sameSite: "none"
+        // sameSite: "none"
     }
 };
 

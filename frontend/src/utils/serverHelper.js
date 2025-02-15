@@ -3,7 +3,7 @@ import { backendUrl } from './config';
 export const makeUnauthPOSTReq = async (route, data) => {
     const urlEncodedData = new URLSearchParams(data).toString();
 
-    const response = await fetch(`https://rythmix-backend-emov.onrender.com${route}`, {
+    const response = await fetch(`https://rythmix-backend-vask.onrender.com${route}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -28,7 +28,7 @@ export const makeAuthPOSTReq = async (route, data) => {
     try {
         const urlEncodedData = new URLSearchParams(data).toString();
 
-        const response = await fetch(`https://rythmix-backend-emov.onrender.com${route}`, {
+        const response = await fetch(`https://rythmix-backend-vask.onrender.com${route}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -54,7 +54,7 @@ export const makeAuthPUTReq = async (route, data) => {
     try {
         const urlEncodedData = new URLSearchParams(data).toString();
 
-        const response = await fetch(`https://rythmix-backend-emov.onrender.com${route}`, {
+        const response = await fetch(`https://rythmix-backend-vask.onrender.com${route}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -78,7 +78,7 @@ export const makeAuthPUTReq = async (route, data) => {
 
 export const makeAuthGETReq = async (route) => {
     try {
-        const response = await fetch(`https://rythmix-backend-emov.onrender.com${route}`, {
+        const response = await fetch(`https://rythmix-backend-vask.onrender.com${route}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ export const makeAuthGETReq = async (route) => {
 
 export const makeAuthDELETEReq = async (route) => {
     try {
-        const response = await fetch(`https://rythmix-backend-emov.onrender.com${route}`, {
+        const response = await fetch(`https://rythmix-backend-vask.onrender.com${route}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -121,14 +121,3 @@ export const makeAuthDELETEReq = async (route) => {
         return { error: error.message };
     }
 };
-
-
-
-
-
-
-
-
-
-
-

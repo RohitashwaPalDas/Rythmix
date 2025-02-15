@@ -64,7 +64,9 @@ function App() {
   const [resumeTime, setResumeTime] = useState(0);
   const [savedPosition, setSavedPosition] = useState(0);
   
-
+  
+  console.log("User is: ", currentUser);
+  
 
 
   const soundRef = useRef(null);  // Persist Howl instance
