@@ -35,7 +35,7 @@ mongoose.connect(dbURL)
 
 // Middleware configuration
 app.use(cors({
-  origin: 'http://localhost:5173', // Frontend URL
+  origin: 'https://rythmix-frontend.onrender.com', // Frontend URL
   credentials: true // Allow cookies and credentials to be sent
 }));
 
@@ -44,7 +44,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.options('*', cors({ origin: 'http://localhost:5173', credentials: true }));
+app.options('*', cors({ origin: 'https://rythmix-frontend.onrender.com', credentials: true }));
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -69,8 +69,8 @@ const sessionOptions = {
     cookie: {
         maxAge: 7 * 24 * 60 * 60 * 1000, // 1 week
         httpOnly: true,
-        secure: false, // Set to true if using HTTPS
-        // sameSite: "none"
+        secure: true, // Set to true if using HTTPS
+        sameSite: "none"
     }
 };
 
@@ -95,7 +95,7 @@ const generateUsername = (email) => {
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/callback",
+    callbackURL: "https://rythmix-backend-vask.onrender.com/auth/google/callback",
     scope: ['profile', 'email'],
   },
   async (accessToken, refreshToken, profile, done) => {
