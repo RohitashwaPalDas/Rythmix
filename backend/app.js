@@ -62,7 +62,7 @@ store.on("error", function(e){
 })
 
 const sessionOptions = {
-    store,
+    
     secret: process.env.secretKey,
     resave: false,
     saveUninitialized: false, // Only save session if something is stored in it
@@ -70,8 +70,9 @@ const sessionOptions = {
         maxAge: 7 * 24 * 60 * 60 * 1000, // 1 week
         httpOnly: true,
         secure: false, // Set to true if using HTTPS
-        // sameSite: "none"
-    }
+        sameSite: "none"
+    },
+    store: new MongoStore({ mongooseConnection: mongoose.connection }) 
 };
 
 app.use(session(sessionOptions));
@@ -95,7 +96,7 @@ const generateUsername = (email) => {
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://rythmix-backend-vask.onrender.com/auth/google/callback",
+    callbackURL: "http://localhost:3000/auth/google/callback",
     scope: ['profile', 'email'],
   },
   async (accessToken, refreshToken, profile, done) => {
