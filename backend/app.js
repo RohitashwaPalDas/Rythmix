@@ -62,7 +62,7 @@ store.on("error", function(e){
 })
 
 const sessionOptions = {
-    
+    store,
     secret: process.env.secretKey,
     resave: false,
     saveUninitialized: false, // Only save session if something is stored in it
@@ -71,8 +71,7 @@ const sessionOptions = {
         httpOnly: true,
         secure: false, // Set to true if using HTTPS
         sameSite: "none"
-    },
-    store: new MongoStore({ mongooseConnection: mongoose.connection }) 
+    }
 };
 
 app.use(session(sessionOptions));
