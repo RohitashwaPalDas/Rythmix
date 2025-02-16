@@ -10,7 +10,7 @@ export default function LogOut() {
 
     const logOut = async () => {
         try {
-            const res = await fetch(`http://localhost:3000/logout`, {
+            const res = await fetch(`https://rythmix-sbzw.onrender.com/logout`, {
                 method: 'POST',
                 credentials: 'include', // Include credentials for session cookies
             });

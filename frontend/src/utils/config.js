@@ -1,1 +1,1 @@
-export const backendUrl = "https://rythmix-backend-zv5g.onrender.com"
+export const backendUrl = "https://rythmix-sbzw.onrender.com"

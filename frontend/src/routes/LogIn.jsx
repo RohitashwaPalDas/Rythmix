@@ -29,7 +29,7 @@ export default function LogIn() {
     };
 
     const handleGoogleSuccess = async (response) => {
-        window.open('http://localhost:3000/auth/google', '_self');
+        window.open('https://rythmix-sbzw.onrender.com/auth/google', '_self');
     };
 
     return (
