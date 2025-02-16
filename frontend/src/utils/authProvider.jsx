@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
         const checkAuthStatus = async () => {
             if (currentUser) {
                 try {
-                    const res = await fetch(`https://rythmix-backend-zv5g.onrender.com/auth/check`, {
+                    const res = await fetch(`http://localhost:3000/auth/check`, {
                         method: 'POST',
                         credentials: 'include'
                     });

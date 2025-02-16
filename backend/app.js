@@ -18,22 +18,17 @@ const cors = require('cors');
 const multer  = require('multer');
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const flash = require("connect-flash");
+const path = require('path');
 
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 
-
-const path = require("path");
-
-app.use(express.static(path.join(__dirname, "build"))); // Change "build" if needed
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
+const _dirname = path.resolve();
 
 
 
 const dbURL = process.env.dbURL;
+console.log("DB URL:", dbURL);
 // Database connection
 mongoose.connect(dbURL)
     .then(() => console.log("Connected to DB"))
@@ -42,7 +37,7 @@ mongoose.connect(dbURL)
 
 // Middleware configuration
 app.use(cors({
-  origin: 'https://rythmix-frontend.onrender.com', // Frontend URL
+  origin: 'http://localhost:5173', // Frontend URL
   credentials: true // Allow cookies and credentials to be sent
 }));
 
@@ -51,7 +46,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.options('*', cors({ origin: 'https://rythmix-frontend.onrender.com', credentials: true }));
+app.options('*', cors({ origin: 'http://localhost:5173', credentials: true }));
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -77,7 +72,7 @@ const sessionOptions = {
         maxAge: 7 * 24 * 60 * 60 * 1000, // 1 week
         httpOnly: true,
         secure: false, // Set to true if using HTTPS
-        sameSite: "none"
+        // sameSite: "none"
     }
 };
 
@@ -144,6 +139,11 @@ app.get("/", (req, res) => {
 app.get("/error", (req, res) => {
     res.send("Some error occurred");
 });
+
+app.use(express.static(path.join(_dirname, '/frontend/dist')));
+app.get("*", (_, res) => {
+    res.sendFile(path.resolve(_dirname, 'frontend', 'dist', 'index.html'));
+})
 
 app.listen(3000, () => {
     console.log("App is listening on port 3000");
