@@ -34,17 +34,7 @@ mongoose.connect(dbURL)
 
 
 // Middleware configuration
-app.use(cors({
-  origin: 'http://localhost:5173', // Frontend URL
-  credentials: true // Allow cookies and credentials to be sent
-}));
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Credentials', 'true');
-    next();
-});
-
-app.options('*', cors({ origin: 'http://localhost:5173', credentials: true }));
 
 
 app.use(express.urlencoded({ extended: true }));
