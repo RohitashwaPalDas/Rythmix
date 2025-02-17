@@ -7,6 +7,10 @@ import ArtistCard2 from "../components/shared/artistCard2";
 export default function AllArtists(){
     const [allArtist, setAllArtist] = useState(null);
     useEffect(() => {
+        console.log("AllArtists component mounted");
+      }, []);
+      
+    useEffect(() => {
         const fetchAllArtists = async () => {
             try {
                 const res = await makeAuthGETReq("/allArtists");

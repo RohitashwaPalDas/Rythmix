@@ -109,42 +109,41 @@ function App() {
       }}
     >
       <BrowserRouter>
-        {currentUser ? (
-          <Routes>
+        <Routes>
             <Route path="/" element={<LandingPage/>} />
             <Route path="/curruser" element={<CheckUser />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/logout" element={<LogOut />} />
-            <Route path="/addsong" element={<AddSong />} />
-            <Route path="/mysong" element={<MySong />} />
-            <Route path="/myplaylist" element={<MyPlaylist />} />
-            <Route path="/myplaylist/:playlistId" element={<SinglePlaylist />} />
-            <Route path="/likedSongs" element={<LikedSongs />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/history" element={<Recents />} />
-            <Route path="/editProfile" element={<EditProfile />} />
             <Route path="/artist/:artistId" element={<ArtistProfile />} />
-            <Route path="/user/:userId" element={<UserProfile />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/myplaylist/:playlistId" element={<SinglePlaylist />} />
             <Route path="/allArtists" element={<AllArtists />} />
             <Route path="/allPlaylists" element={<AllPlaylists />} />
-            <Route path="/auth/google/success" element={<GoogleAuthSuccess />} />
-            <Route path="/updatepassword" element={<UpdatePassword />} />
-            <Route path="/myfollowing" element={<Followers />} />
-            <Route path="/recents" element={<Recents />} />
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
-        ) : (
-          <Routes>
-            <Route path="/" element={<LandingPage/>} />
-            <Route path="/curruser" element={<CheckUser />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/login" element={<LogIn />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/auth/google/success" element={<GoogleAuthSuccess />} />
-            <Route path="/forgotpassword" element={<ForgotPassword />} />
-            <Route path="/reset-password/:token" element={<ResetPassword />} />
-          </Routes>
-        )}
+          {currentUser ? (
+            <>
+              <Route path="/logout" element={<LogOut />} />
+              <Route path="/addsong" element={<AddSong />} />
+              <Route path="/mysong" element={<MySong />} />
+              <Route path="/myplaylist" element={<MyPlaylist />} />
+              <Route path="/likedSongs" element={<LikedSongs />} />
+              <Route path="/history" element={<Recents />} />
+              <Route path="/editProfile" element={<EditProfile />} />
+              <Route path="/user/:userId" element={<UserProfile />} />
+              <Route path="/auth/google/success" element={<GoogleAuthSuccess />} />
+              <Route path="/updatepassword" element={<UpdatePassword />} />
+              <Route path="/myfollowing" element={<Followers />} />
+              <Route path="/recents" element={<Recents />} />
+              <Route path="*" element={<Navigate to={currentUser ? "/home" : "/login"} />} />
+            </>
+          ) : (
+            <>
+              <Route path="/login" element={<LogIn />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/auth/google/success" element={<GoogleAuthSuccess />} />
+              <Route path="/forgotpassword" element={<ForgotPassword />} />
+              <Route path="/reset-password/:token" element={<ResetPassword />} />
+            </>
+          )}
+        </Routes>
       </BrowserRouter>
     </SongContext.Provider>
   );
