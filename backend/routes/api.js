@@ -7,7 +7,7 @@ const temporaryTokens = new Map();
 
 // Generate a temporary token (valid for 5 minutes)
 router.get('/generate-token', (req, res) => {
-    const allowedOrigin = 'http://localhost:5173'; // Replace with your frontend's URL
+    const allowedOrigin = 'https://rythmix-sbzw.onrender.com/'; // Replace with your frontend's URL
 
     const origin = req.headers.origin || req.headers.referer;
     if (!origin || !origin.startsWith(allowedOrigin)) {

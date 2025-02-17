@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 
 
-const dbURL = "mongodb+srv://rohitashwapaldas:0yuOzBGcw4BvEYtr@cluster0.akhon.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const dbURL = "mongodb+srv://rohitashwapaldas:aLWKMIS9GQyMdDdd@cluster0.akhon.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 console.log(dbURL);
 
 main()

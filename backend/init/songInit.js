@@ -3,7 +3,7 @@ const Artist = require('../models/artist.js'); // Adjust the path as needed
 const mongoose = require("mongoose");
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/rythmix";
-const DB_URL = "mongodb+srv://rohitashwapaldas:0yuOzBGcw4BvEYtr@cluster0.akhon.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const DB_URL = "mongodb+srv://rohitashwapaldas:aLWKMIS9GQyMdDdd@cluster0.akhon.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 main()
   .then(() => {
