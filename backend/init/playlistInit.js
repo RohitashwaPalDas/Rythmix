@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const USer = require("../models/user.js");
 
 
-const dbURL = "mongodb+srv://rohitashwapaldas:aLWKMIS9GQyMdDdd@cluster0.akhon.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const dbURL = "";
 
 main()
 .then(()=>{
